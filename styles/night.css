@@ -1,0 +1,192 @@
+/* ============================================================
+   🌙 MODE NUIT — VERSION OPTIMISÉE POUR TON PORTFOLIO
+   ============================================================ */
+
+/* 🎨 Couleurs globales */
+body.night-mode {
+    background-color: #0b0b0b;
+    color: #f1f1f1;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ----------------------------------------
+   HEADER
+-----------------------------------------*/
+body.night-mode header {
+    background: linear-gradient(135deg, #000814, #001d3d);
+    color: #f1f1f1;
+}
+
+body.night-mode #toggle-button,
+body.night-mode .lang-toggle-btn {
+    background: #222;
+    color: #f1f1f1;
+    border: 1px solid #444;
+}
+
+body.night-mode #toggle-button:hover,
+body.night-mode .lang-toggle-btn:hover {
+    background: #333;
+}
+
+/* ----------------------------------------
+   NAVIGATION
+-----------------------------------------*/
+body.night-mode .navbar {
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #222;
+}
+
+body.night-mode .navbar.scrolled {
+    background: rgba(37, 39, 43, 0.95);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+}
+
+body.night-mode .nav-link,
+body.night-mode .nav-mobile-link {
+    color: #66a3ff;
+}
+
+body.night-mode .nav-link:hover,
+body.night-mode .nav-mobile-link:hover {
+    color: #aaccff;
+}
+
+body.night-mode .nav-mobile {
+    background: rgba(15, 15, 15, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Nom flottant gauche */
+body.night-mode #floating-name {
+    background: #003d99;
+    color: #f1f1f1;
+}
+
+body.night-mode #floating-name:hover {
+    background: #002f77;
+}
+
+/* ----------------------------------------
+   SECTIONS
+-----------------------------------------*/
+body.night-mode section {
+    background: #161616;
+    border: 1px solid #222;
+}
+
+body.night-mode h2 {
+    color: #66a3ff;
+}
+
+body.night-mode h3 {
+    color: #88bbff;
+}
+
+body.night-mode h4 {
+    color: #a0c7f9;
+}
+
+/* ----------------------------------------
+   COMPÉTENCES TECHNIQUES
+-----------------------------------------*/
+body.night-mode .tech-item {
+    background: #1f1f1f;
+    border: 1px solid #333;
+    color: #f1f1f1;
+}
+
+/* ----------------------------------------
+   QUALITÉS
+-----------------------------------------*/
+body.night-mode .qualities p,
+body.night-mode .qualities li {
+    background: #14213d;
+    border-left: 4px solid #2e6ff7;
+    color: #f1f1f1;
+}
+
+/* ----------------------------------------
+   DIPLOMES
+-----------------------------------------*/
+body.night-mode .degree-card {
+    background: #1b1b1b;
+    border-left: 5px solid #3377ff;
+    color: #f1f1f1;
+}
+
+/* ----------------------------------------
+   LANGUES
+-----------------------------------------*/
+body.night-mode .languages-list li {
+    background: #1a1a1a;
+    border-left: 4px solid #2e6ff7;
+    color: #f1f1f1;
+}
+
+/* ----------------------------------------
+   CENTRES D'INTÉRÊT
+-----------------------------------------*/
+body.night-mode .interest-card {
+    background: #1c1c1c;
+    border: 1px solid #333;
+    color: #f1f1f1;
+}
+
+body.night-mode .interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+body.night-mode .interest-card img {
+    filter: brightness(0.9);
+}
+
+body.night-mode .interest-card p {
+    color: whitesmoke;
+}
+
+/* ----------------------------------------
+   PROJETS
+-----------------------------------------*/
+body.night-mode .project-card {
+    background: #121a2b;
+    border-left: 4px solid #3e7bff;
+    color: #f1f1f1;
+}
+
+body.night-mode .project-card a {
+    color: #66a3ff;
+}
+
+body.night-mode .project-card a:hover {
+    color: #aaccff;
+}
+
+/* ----------------------------------------
+   FORMULAIRE
+-----------------------------------------*/
+body.night-mode input,
+body.night-mode textarea {
+    background: #1a1a1a;
+    color: #eee;
+    border: 1px solid #444;
+}
+
+body.night-mode button[type="submit"] {
+    background: #0055dd;
+    color: #fff;
+}
+
+body.night-mode button[type="submit"]:hover {
+    background: #003f99;
+}
+
+/* ----------------------------------------
+   FOOTER
+-----------------------------------------*/
+body.night-mode footer {
+    background: #111;
+    color: #ccc;
+    border-top: 1px solid #222;
+}

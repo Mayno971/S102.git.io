@@ -1,0 +1,102 @@
+/* ----------------------------------------
+   RESPONSIVE DESIGN
+-----------------------------------------*/
+@media (max-width: 900px) {
+    section {
+        padding: 40px 8%;
+    }
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    /* Cacher menu desktop */
+    .nav-menu {
+        display: none;
+    }
+
+    /* Afficher hamburger */
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Zone droite: garder boutons + hamburger alignés */
+    .nav-buttons {
+        order: 2;
+    }
+
+    /* Menu mobile: afficher quand actif */
+    .nav-mobile.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    /* cache les liens mais garde le bouton thème */
+    .nav-menu {
+        display: none;
+    }
+
+    #toggle-button {
+        display: none;
+    }
+
+    /* affiche burger */
+    .nav-toggle {
+        display: flex;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+
+    .nav-container {
+        padding: 0 0.8rem;
+        gap: 0.5rem;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .lang-toggle-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .nav-logo {
+        font-size: 1.05rem;
+        max-width: 120px;
+    }
+
+    .lang-toggle-btn {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .nav-toggle {
+        padding: 0.2rem;
+    }
+
+    .hamburger {
+        width: 22px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-mobile {
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
+}
