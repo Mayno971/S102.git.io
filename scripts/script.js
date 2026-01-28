@@ -69,6 +69,7 @@
     /* ----------------------------------------------------
        INTRO SCREEN (disparition au scroll)
     ---------------------------------------------------- */
+    
     const intro = document.getElementById('intro-screen');
 
     function hideIntroOnScroll() {
