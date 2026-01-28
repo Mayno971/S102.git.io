@@ -12,7 +12,9 @@
 }
 
 @media screen and (max-width: 992px) {
-
+    section {
+        padding: 60px 5%;
+    }
     /* Cacher menu desktop */
     .nav-menu {
         display: none;
@@ -21,6 +23,20 @@
     /* Afficher hamburger */
     .nav-toggle {
         display: flex;
+        margin-left: 10px;
+    }
+
+    .nav-right {
+        gap: 0.5rem;
+    }
+
+    .nav-mobile {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     /* Zone droite: garder boutons + hamburger alignés */
@@ -53,22 +69,37 @@
 
 /* Smartphones */
 @media (max-width: 600px) {
+    header {
+        padding: 40px 15px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
 
     .nav-container {
-        padding: 0 0.8rem;
-        gap: 0.5rem;
+        padding: 0 1rem;
     }
 
     .nav-logo {
-        font-size: 1.2rem;
-        max-width: 150px;
+        font-size: 1.1rem;
+        max-width: 40%;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
+    #toggle-button,
     .lang-toggle-btn {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.85rem;
+        height: 34px;
+        min-width: 34px;
+        font-size: 0.9rem;
+        padding: 0 8px;
+    }
+
+    .nav-mobile {
+        width: 100%;
+        box-sizing: border-box; 
     }
 }
 
@@ -98,5 +129,27 @@
         width: 100%;
         right: 0;
         left: 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    
+    .nav-container {
+        padding: 0 0.5rem; 
+    }
+
+    .nav-logo {
+        font-size: 1rem;
+        max-width: 100px;
+    }
+
+    /* Cacher le texte du bouton langue si besoin, ou réduire */
+    .lang-toggle-btn {
+        font-size: 0.75rem;
+    }
+    
+    /* Burger menu plus petit */
+    .hamburger {
+        width: 22px;
     }
 }

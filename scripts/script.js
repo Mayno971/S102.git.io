@@ -72,13 +72,17 @@
     
     const intro = document.getElementById('intro-screen');
 
-    function hideIntroOnScroll() {
-        intro.classList.add('hidden');
-        window.removeEventListener('scroll', hideIntroOnScroll);
-    }
-
     if (intro) {
-        window.addEventListener('scroll', hideIntroOnScroll);
+        // 3. On écoute l'événement de scroll
+        window.addEventListener('scroll', () => {
+            
+            // La méthode toggle ajoute la classe 'hidden' si la condition (2ème argument) est VRAIE
+            // Elle enlève la classe 'hidden' si la condition est FAUSSE (donc si on est à 0)
+            const shouldHide = window.scrollY > 0; 
+            
+            intro.classList.toggle('hidden', shouldHide);
+
+        }, { passive: true });
     }
 
 

@@ -127,8 +127,8 @@ header h2 {
 
 .nav-buttons {
     display: flex;
-    align-items: center;       /* centre verticalement */
-    justify-content: flex-end; /* boutons à droite */
+    align-items: center;       
+    justify-content: flex-end; 
     gap: 0.5rem;
 }
 
@@ -178,15 +178,23 @@ header h2 {
 .nav-mobile {
     display: none;
     flex-direction: column;
+    width: 100%;
     background: rgba(162, 197, 253, 0.95);
     backdrop-filter: blur(15px);
-    padding: 1.3rem;
+    padding: 1.5rem;
     gap: 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-sizing: border-box;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .nav-mobile.active {
     display: flex;
+    opacity: 0;
+    transform: translateY(0);
 }
 
 .nav-mobile-link {
