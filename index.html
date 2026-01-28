@@ -22,16 +22,17 @@
             <h2 data-translate="job_title">Étudiant en informatique</h2>
             <p data-translate="welcome_text">À la recherche d'un stage en informatique</p>
             <div class="hero-buttons">
-                <button href="#projects" class="btn btn-primary" onclick="scrollToSection('projets')" data-key="hero-btn-projects">
-                    Voir mes projets
+                <button class="btn btn-primary" onclick="scrollToSection('projets')" data-key="hero-btn-projects"><a href="#projects">
+                    Voir mes projets</a>
                 </button>
-                <button href="contacts" class="btn btn-secondary" onclick="scrollToSection('contact')" data-key="hero-btn-contact">
-                    Me contacter
+                <button  class="btn btn-secondary" onclick="scrollToSection('contact')" data-key="hero-btn-contact"><a href="#contacts">
+                    Me contacter </a>
                 </button>
             </div>
             <p id="scroll-message" data-translate="scroll_message">⬇ Faites défiler vers le bas ⬇</p>
         </div>
-        <!-- 🏆 HEADER -->
+
+        <!-- HEADER -->
         <header id="header" class="reveal">
             
             <h1>Noahn de LACROIX</h1>
@@ -49,7 +50,7 @@
 
                 <!-- Zone gauche : Logo -->
                 <div class="nav-left">
-                    <div class="nav-logo" data-translate="name_title">Noahn de Lacroix</div>
+                    <div class="nav-logo">Noahn de Lacroix</div>
                 </div>
 
                 <!-- Zone droite : liens + boutons + hamburger -->
@@ -60,13 +61,17 @@
                         <a href="#about" class="nav-link" data-translate="nav_about">À propos</a>
                         <a href="#profile" class="nav-link" data-translate="nav_profile">Profil</a>
                         <a href="#projects" class="nav-link" data-translate="nav_projects">Projets</a>
-                        <a href="#contact" class="nav-link" data-translate="nav_contacts">Contact</a>
+                        <a href="#contacts" class="nav-link" data-translate="nav_contacts">Contact</a>
                     </div>
 
                     <!-- Boutons à DROITE (langue + thème) -->
                     <div class="nav-buttons">
-                        <button id="toggle-button" aria-label="Changer le mode">🌞</button>
-                        <button class="lang-toggle-btn" id="lang-desktop">EN</button>
+                        <button id="toggle-button" type="button" aria-label="Changer le mode">
+                            nuit
+                        </button>
+                        <button class="lang-toggle-btn" id="lang-desktop" type="button" aria-label="Changer la langue">
+                            EN
+                        </button>
                     </div>
 
                     <!-- Hamburger -->
@@ -85,16 +90,16 @@
                 <a href="#about" class="nav-mobile-link" data-translate="nav_about">À propos</a>
                 <a href="#profile" class="nav-mobile-link" data-translate="nav_profile">Profil</a>
                 <a href="#projects" class="nav-mobile-link" data-translate="nav_projects">Projets</a>
-                <a href="#contact" class="nav-mobile-link" data-translate="nav_contacts">Contact</a>
+                <a href="#contacts" class="nav-mobile-link" data-translate="nav_contacts">Contact</a>
                 
             </div>
         </nav>
  
 
-        <!-- 📌 MAIN CONTENT -->
+        <!-- MAIN CONTENT -->
         <main>
 
-            <!-- ℹ️ À PROPOS -->
+            <!-- À PROPOS -->
             <section id="about" class="reveal">
                 <h2 data-translate="about_title">À propos de moi</h2>
                 <p>
@@ -107,8 +112,8 @@
                     préparer au mieux aux exigences du monde professionnel.
                 </p>
                 <p>
-                    Je suis à la recherche d'un stage dans le domaine du <strong>développement web ou mobile</strong> en Ile de France ou en Guadeloupe. Avec une possibilité de le 
-                    réaliser aussi en tant que développeur <strong>full/stack</strong>. Ce stage permettra de valider ma deuxième année dans le BUT Informatique
+                    Je suis à la recherche d'un stage à partir du .. Avril 2026 de 3 mois dans le domaine du <strong>développement web ou mobile</strong> en Ile de France ou en Guadeloupe. Avec une possibilité de le 
+                    réaliser aussi en tant que développeur <strong>full/stack</strong>. Ce stage permettra de valider ma deuxième année dans le BUT Informatique. 
                 </p>
             </section>
 
@@ -207,7 +212,7 @@
                     </li>
                 </ul>
 
-                <!-- 🎯 CENTRES D'INTÉRÊT -->
+                <!-- CENTRES D'INTÉRÊT -->
                 <div class="container">
                     <h3>Centres d'intérêt</h3>
                     <div class="interest-grid">
@@ -241,7 +246,7 @@
 
             </section>
 
-            <!-- 📁 PROJETS -->
+            <!-- PROJETS -->
             <section id="projects" class="reveal">
                 <h2>Mes Projets Professionels et personnels</h2>
                 <p>Découvrez mes réalisations dans le domaine informatique</p>                
@@ -320,7 +325,7 @@
                 </div>
             </section>
 
-            <!-- 📞 CONTACT -->
+            <!-- CONTACT -->
             <section id="contacts" class="contact">
                 <div class="contact-container">
                     <h2>Contactez-moi</h2>
@@ -370,14 +375,14 @@
 
         </main>
 
-        <!-- 🏁 FOOTER -->
+        <!-- FOOTER -->
         <footer id="NoteEtReferences" class="reveal">
             <p>&copy; 2026 Tous droits réservez à Noahn de Lacroix</p>
             
         </footer>
 
 
-        <!-- 🎬 JAVASCRIPT -->
+        <!-- JAVASCRIPT -->
         <script src="./scripts/script.js"></script>
     </body>
 </html>

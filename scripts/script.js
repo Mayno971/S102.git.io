@@ -129,21 +129,32 @@
     const body = document.body;
 
     function updateToggleIcon() {
-        toggleButton.textContent = body.classList.contains("night-mode") ? "🌙" : "🌞";
+        if (toggleButton){
+            toggleButton.textContent = body.classList.contains("night-mode") ? "nuit" : "jour";
+        }
+        
     }
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const storedTheme = localStorage.getItem("theme");
 
-    // Restauration depuis localStorage
-    if (localStorage.getItem("theme") === "night") {
+    if (storedTheme === "night"){
+        body.classList.add("night-mode");
+    } else if (storedTheme === "day"){
+         body.classList.remove("night-mode");
+    } else if (systemPrefersDark) {
         body.classList.add("night-mode");
     }
 
-    if (toggleButton) {
-        updateToggleIcon();
-
-        toggleButton.addEventListener("click", () => {
+    updateToggleIcon();
+    
+    if (toggleButton){
+        toggle.addEventListener("click", () => {
             body.classList.toggle("night-mode");
+            
             const isNight = body.classList.contains("night-mode");
+            
             localStorage.setItem("theme", isNight ? "night" : "day");
+            
             updateToggleIcon();
         });
     }
