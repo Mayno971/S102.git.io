@@ -51,7 +51,7 @@ header h2 {
 -----------------------------------------*/
 
 .navbar {
-    position: absolute;      /* dans le header quand en haut */
+    position: absolute;      
     top: 0;
     left: 0;
     width: 100%;
@@ -481,17 +481,6 @@ h3 {
     border-radius: 15px;
     border-left: 4px solid #0044aa;
 }
-
-.project-card a {
-    text-decoration: none;
-    color: #0066ff;
-    font-weight: bold;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
-}
-
 .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -531,45 +520,66 @@ h3 {
     color: #fdba74;
 }
 
+.project-card button {
+    text-decoration: none;
+    background: #0066ff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+.project-card button:hover {
+    background: #0044aa;
+}
+
 /* ----------------------------------------
    SECTION DE CONTACT
 -----------------------------------------*/
-#contacts {
-    padding: 60px 15%;
+.contact {
+    padding : 5rem 0;
+    background: rgba(30, 41, 59, 0.3)
 }
 
-.contact-container {
+.contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
-.contact-info h3,
-.contact-form h3 {
-    color: #0044aa;
-    margin-bottom: 10px;
+.contact-card {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(51, 65, 85, 0.5);
+    border-radius: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.3s ease;
 }
 
-.contact-info ul {
-    list-style: none;
-    padding: 0;
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: #60a5fa;
 }
 
-.contact-info li {
-    margin: 12px 0;
-    font-size: 1rem;
+.contact-icon {
+    margin-bottom: 1rem;
+    color: #60a5fa;
 }
 
-.contact-info a {
-    color: #0066ff;
-    text-decoration: none;
-    font-weight: 500;
+.contact-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-.contact-info a:hover {
-    text-decoration: underline;
+.contact-card a {
+    color: #94a3b8;
+    font-size: 0.9rem;
 }
+
 
 /* Formulaire amélioré */
 .contact-form {

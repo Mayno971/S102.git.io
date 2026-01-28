@@ -21,6 +21,14 @@
             <h1>Noahn de LACROIX</h1>
             <h2 data-translate="job_title">Étudiant en informatique</h2>
             <p data-translate="welcome_text">À la recherche d'un stage en informatique</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('projets')" data-key="hero-btn-projects">
+                    Voir mes projets
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')" data-key="hero-btn-contact">
+                    Me contacter
+                </button>
+            </div>
             <p id="scroll-message" data-translate="scroll_message">⬇ Faites défiler vers le bas ⬇</p>
         </div>
         <!-- 🏆 HEADER -->
@@ -157,9 +165,7 @@
                     <p>Capacité à travailler en équipe</p>
                     <p>Autonomie et curiosité</p>
                     <p>Organisation d'un projet</p>
-                    <p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-                        Responsabilité
-                    </p>
+                    <p> Responsabilité </p>
                 </div>
 
                 <h3> Mes diplomes obtenues</h3>
@@ -227,7 +233,7 @@
                         </div>
                         <div class="interest-card">
                             <img src="./assets/sport.png" alt="Sport Spectacle">
-                            <h4>Sport Spectateur</h4>
+                            <h4>Sport</h4>
                             <p>JO, NBA, F1… Analyse des performances et stratégies.</p>
                         </div>
                     </div>
@@ -245,27 +251,26 @@
                         Outil interactif pour suivre l’avancement de projets personnels ou académiques. L’application permet 
                         de créer, modifier et supprimer des tâches, et de les organiser par priorité.
                     </p>
-                    <ul>
-                        <li>🚀 Technologies : React.js, Firebase, Material UI</li>
-                    </ul>
                     <div class="project-tags">
                         <span class="tag tag-blue">Web Development</span>
                         <span class="tag tag-green">Backend</span>
                     </div>
-                    <a href="https://github.com/username/task-manager" target="_blank">Voir sur GitHub</a>
+                    <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
+                    <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
                 </div>
 
                 <div class="project-card">
-                    <h3>Site Web Ice Peak Park</h3>
+                    <h3>Site Web d'un parc d'attraction virtuel</h3>
                     <p>
                         Développement d’un site web pour un parc d’attractions virtuel nommé Ice Peak Park. Le site présente les attractions, 
-                        événements et permet une navigation interactive pour les visiteurs.
+                        événements et permet une navigation interactive pour les visiteurs. 
                     </p>
                     <div class="project-tags">
                         <span class="tag tag-blue">Web Development</span>
                         <span class="tag tag-green">Frontend</span>
                         <span class="tag tag-purple">UX/UI</span>
                     </div>
+                    <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
                 </div>
 
                 <div class="project-card">
@@ -278,7 +283,8 @@
                         <span class="tag tag-green">Algorithmique</span>
                         <span class="tag tag-purple">Game Dev</span>
                     </div>
-                    <a href="https://github.com/username/2d-game" target="_blank">Voir sur GitHub</a>
+                    <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
+                    <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
                 </div>
 
                 <div class="project-card">
@@ -292,44 +298,62 @@
                         <span class="tag tag-green">UX/UI</span>
                         <span class="tag tag-purple">Collaboration</span>
                     </div>
-                    <a href="https://github.com/username/ciup-app" target="_blank">Voir sur GitHub</a>
+                    <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
+                    <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
                 </div>
             
                 <div class="project-card">
-                    <h3>Application de Création de Groupes de TD et TP</h3>
-                    <p>Création d’un site web permettant de gérer la formation de groupes de TD et TP pour une université. Le projet inclut la conception d’une 
-                        base de données relationnelle et une interface utilisateur simple pour la création et l’organisation des groupes.
+                    <h3>Application de Création de Groupes pour une Université</h3>
+                    <p>
+                        Conception et déploiement d'une plateforme universitaire automatisant la répartition des 
+                        étudiants. Optimisation de la création des groupes via des algorithmes de génération automatique 
+                        et modélisation d'une base de données relationnelle structurée.
                     </p>
+                    <p><strong>Langage utilisés : </strong> PHP, HTML, CSS, Java, PL/SQL, SQL</p>
                     <div class="project-tags">
                         <span class="tag tag-blue">Web Development</span>
                         <span class="tag tag-green">Backend</span>
                         <span class="tag tag-purple">Database</span>
                     </div>
+                    <button><a href="https://projets.iut-orsay.fr/saes3-mdiall48/" target="_blank">Voir</a></button>
                 </div>
             </section>
 
             <!-- 📞 CONTACT -->
-            <section id="contacts" class="reveal">
-                <h2>Contactez-moi</h2>
-
+            <section id="contacts" class="contact">
                 <div class="contact-container">
-
-                    <!-- 📬 Informations de contact -->
-                    <article class="contact-info">
-                        <h3>Mes informations</h3>
-                        <ul>
-                            <li>
-                                <strong>📧 Email :</strong>
-                                <a href="mailto:nodelac@gmail.com">nodelac@gmail.com</a>
-                            </li>
-                            <li>
-                                <strong>💼 LinkedIn :</strong>
-                                <a href="https://www.linkedin.com/in/noahn-de-lacroix-8b455339a" target="_blank">
-                                    Voir mon profil LinkedIn
-                                </a>
-                            </li>
-                        </ul>
-                    </article>
+                    <h2>Contactez-moi</h2>
+                    <p>Intéressé par une collaboration ? N'hésitez pas à me contacter</p>
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <h4>Email</h4>
+                            <a href="mailto:nodelac@gmail.com">nodelac@gmail.com</a>
+                        </div>
+                        
+                        
+                        <div class="contact-card">
+                            <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            <h4>GitHub</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                
+                    <div class="contact-card">
+                        <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <h4 data-key="contact-linkedin">Linkedin</h4>
+                        <a href="https://www.linkedin.com/in/noahn-de-lacroix-8b455339a" target="_blank">
+                            Voir mon profil LinkedIn
+                        </a>
+                    </div>
 
                     <!-- 📝 Formulaire -->
                     <form class="contact-form">
@@ -347,7 +371,7 @@
 
         <!-- 🏁 FOOTER -->
         <footer id="NoteEtReferences" class="reveal">
-            <p>&copy; 2025 Tous droits réservez à Noahn de Lacroix</p>
+            <p>&copy; 2026 Tous droits réservez à Noahn de Lacroix</p>
             
         </footer>
 
