@@ -143,11 +143,10 @@
     updateToggleIcon();
     
     if (toggleButton){
-        toggle.addEventListener("click", () => {
+        toggleButton.addEventListener("click", () => { 
             body.classList.toggle("night-mode");
             
             const isNight = body.classList.contains("night-mode");
-            
             localStorage.setItem("theme", isNight ? "night" : "day");
             
             updateToggleIcon();
