@@ -153,4 +153,24 @@
         });
     }
 
+    // Sélectionnez l'élément
+    const logo = document.querySelector('.nav-logo');
+
+    logo.addEventListener('click', (e) => {
+        // Si c'est un lien vers "#", on empêche le comportement par défaut pour gérer le smooth scroll
+        e.preventDefault(); 
+        
+        // Remonte tout en haut
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+        // Optionnel : Fermer le menu mobile si ouvert
+        const navMobile = document.getElementById('nav-mobile');
+        if (navMobile.classList.contains('active')) {
+            navMobile.classList.remove('active');
+        }
+    });
+
 });

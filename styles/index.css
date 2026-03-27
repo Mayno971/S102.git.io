@@ -87,12 +87,22 @@ header h2 {
 }
 
 .nav-logo {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
     font-size: 1.3rem;
     font-weight: 700;
     background: linear-gradient(135deg, #fafafa, #96dcff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 .nav-menu {
