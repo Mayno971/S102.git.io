@@ -87,12 +87,22 @@ header h2 {
 }
 
 .nav-logo {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
     font-size: 1.3rem;
     font-weight: 700;
     background: linear-gradient(135deg, #fafafa, #96dcff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 .nav-menu {
@@ -269,6 +279,41 @@ h4 {
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ----------------------------------------
+   EXPERIENCES PROFESSIONELS
+-----------------------------------------*/
+
+.pro-exp {
+    background: #1b1b1b;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border-left: 5px solid #3377ff;
+    color: #f1f1f1;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pro-exp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255,255,255,0.05);
+}
+
+.pro-exp h4 {
+    margin-bottom: 8px;
+}
+
+.pro-exp p {
+    margin: 6px 0;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .pro-exp { padding: 15px; }
+    .pro-exp h4 { font-size: 1.1rem; }
+    .pro-exp p { font-size: 0.9rem; }
 }
 
 /* ----------------------------------------
