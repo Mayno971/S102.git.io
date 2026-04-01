@@ -13,8 +13,13 @@
 
 @media screen and (max-width: 992px) {
     section {
-        padding: 60px 5%;
+        padding: 50px 8%;
     }
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
     /* Cacher menu desktop */
     .nav-menu {
         display: none;
@@ -26,19 +31,6 @@
         margin-left: 10px;
     }
 
-    .nav-right {
-        gap: 0.5rem;
-    }
-
-    .nav-mobile {
-        position: absolute;
-        top: 100%; 
-        left: 0;
-        width: 100%;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
     /* Zone droite: garder boutons + hamburger alignés */
     .nav-buttons {
         order: 2;
@@ -47,6 +39,10 @@
     /* Menu mobile: afficher quand actif */
     .nav-mobile.active {
         display: flex;
+    }
+
+    #toggle-button {
+        display: none;
     }
 }
 
@@ -68,38 +64,37 @@
 }
 
 /* Smartphones */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+    section {
+        padding: 40px 5%;
+    }
+
     header {
         padding: 40px 15px;
     }
-    
-    header h1 {
-        font-size: 2rem;
-    }
 
-    .nav-container {
-        padding: 0 1rem;
+    header h1 {
+        font-size: 1.8rem;
     }
 
     .nav-logo {
-        font-size: 1.1rem;
-        max-width: 40%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 1rem;
     }
 
-    #toggle-button,
-    .lang-toggle-btn {
-        height: 34px;
-        min-width: 34px;
-        font-size: 0.9rem;
-        padding: 0 8px;
+    /* Les grilles passent à 1 seule colonne pour éviter d'écraser le contenu */
+    .pro-exp,
+    .degree-card,
+    .contact-form {
+        padding: 15px;
     }
 
-    .nav-mobile {
-        width: 100%;
-        box-sizing: border-box; 
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     }
 }
 
@@ -133,9 +128,9 @@
 }
 
 @media screen and (max-width: 380px) {
-    
+
     .nav-container {
-        padding: 0 0.5rem; 
+        padding: 0 0.5rem;
     }
 
     .nav-logo {
@@ -147,7 +142,7 @@
     .lang-toggle-btn {
         font-size: 0.75rem;
     }
-    
+
     /* Burger menu plus petit */
     .hamburger {
         width: 22px;

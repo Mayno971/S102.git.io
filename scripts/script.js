@@ -86,17 +86,22 @@
     ---------------------------------------------------- */
     const sections = document.querySelectorAll(".reveal");
 
-    function revealOnScroll() {
-        sections.forEach(section => {
-            const top = section.getBoundingClientRect().top;
-            if (top < window.innerHeight * 0.85) {
-                section.classList.add("visible");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible");
             }
         });
-    }
+    }, {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    });
 
-    revealOnScroll();
-    window.addEventListener("scroll", revealOnScroll);
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 
 
     /* ----------------------------------------------------

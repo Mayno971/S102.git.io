@@ -1,447 +1,479 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <link rel="stylesheet" href="./styles/index.css"/>
-        <link rel="stylesheet" href="./styles/intro.css"/>  
-        <link rel="stylesheet" href="./styles/responsive.css"/>  
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="icon" type="image/jpg" href="./assets/logo.png"/>
-        <script src="./scripts/translations.js"></script>
-        <title>Noahn de LACROIX - Portfolio</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/intro.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
 
-    </head>
-    <body>
-        <div id="floating-name" class ="floating-btn">Noahn de Lacroix</div>
+    <link rel="icon" type="image/jpg" href="./assets/logo.png" />
+    <script src="./scripts/translations.js"></script>
+    <title>Noahn de LACROIX - Portfolio</title>
 
-        <!-- Écran d'intro -->
-        <div id="intro-screen">
-            <img src="./assets/pp.png" alt="Photo de profil" class="profile-pics">
+</head>
 
-            <h1>Noahn de LACROIX</h1>
-            <h2 data-translate="job_title">Étudiant en informatique</h2>
-            <p data-translate="welcome_text">À la recherche d'un stage en informatique</p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="scrollToSection('projets')" data-key="hero-btn-projects"><a href="#projects">
+<body>
+    <div id="floating-name" class="floating-btn">Noahn de Lacroix</div>
+
+    <!-- Écran d'intro -->
+    <div id="intro-screen">
+        <img src="./assets/pp.png" alt="Photo de profil" class="profile-pics">
+
+        <h1>Noahn de LACROIX</h1>
+        <h2 data-translate="job_title">Étudiant en informatique</h2>
+        <p data-translate="welcome_text">À la recherche d'un stage en informatique</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="scrollToSection('projets')" data-key="hero-btn-projects"><a
+                    href="#projects">
                     Voir mes projets</a>
-                </button>
-                <button  class="btn btn-secondary" onclick="scrollToSection('contact')" data-key="hero-btn-contact"><a href="#contacts">
+            </button>
+            <button class="btn btn-secondary" onclick="scrollToSection('contact')" data-key="hero-btn-contact"><a
+                    href="#contacts">
                     Me contacter </a>
-                </button>
+            </button>
+        </div>
+        <p id="scroll-message" data-translate="scroll_message">⬇ Faites défiler vers le bas ⬇</p>
+    </div>
+
+    <!-- HEADER -->
+    <header id="header" class="reveal">
+
+        <h1>Noahn de LACROIX</h1>
+        <h2 data-translate="job_title">Étudiant en informatique</h2>
+        <p data-translate="welcome_text">
+            Bienvenue dans mon univers numérique –
+            découvrez mes projets, mes compétences et ma passion pour l’innovation digitale.
+        </p>
+
+    </header>
+
+    <!-- 🧭 NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <!-- Zone gauche : Logo -->
+            <div class="nav-left">
+                <div href="#" class="nav-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                    Noahn de Lacroix
+                </div>
             </div>
-            <p id="scroll-message" data-translate="scroll_message">⬇ Faites défiler vers le bas ⬇</p>
+
+            <!-- Zone droite : liens + boutons + hamburger -->
+            <div class="nav-right">
+
+                <!-- Menu Desktop -->
+                <div class="nav-menu">
+                    <a href="#about" class="nav-link" data-translate="nav_about">À propos</a>
+                    <a href="#profile" class="nav-link" data-translate="nav_profile">Profil</a>
+                    <a href="#projects" class="nav-link" data-translate="nav_projects">Projets</a>
+                    <a href="#contacts" class="nav-link" data-translate="nav_contacts">Contact</a>
+                </div>
+
+                <!-- Boutons à DROITE (langue + thème) -->
+                <div class="nav-buttons">
+                    <button class="lang-toggle-btn" id="lang-desktop" type="button" aria-label="Changer la langue">
+                        EN
+                    </button>
+                </div>
+
+                <!-- Hamburger -->
+                <button class="nav-toggle" id="nav-toggle">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+            </div>
+
         </div>
 
-        <!-- HEADER -->
-        <header id="header" class="reveal">
-            
-            <h1>Noahn de LACROIX</h1>
-            <h2 data-translate="job_title">Étudiant en informatique</h2>
-            <p data-translate="welcome_text">
-                Bienvenue dans mon univers numérique – 
-                découvrez mes projets, mes compétences et ma passion pour l’innovation digitale.
+        <!-- Menu mobile -->
+        <div class="nav-mobile" id="nav-mobile">
+            <a href="#about" class="nav-mobile-link" data-translate="nav_about">À propos</a>
+            <a href="#profile" class="nav-mobile-link" data-translate="nav_profile">Profil</a>
+            <a href="#projects" class="nav-mobile-link" data-translate="nav_projects">Projets</a>
+            <a href="#contacts" class="nav-mobile-link" data-translate="nav_contacts">Contact</a>
+
+        </div>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- À PROPOS -->
+        <section id="about" class="reveal">
+            <h2 data-translate="about_title">À propos de moi</h2>
+            <p>
+                Je m'appelle <strong>Noahn de LACROIX</strong>, j’ai 19 ans et je suis actuellement étudiant en Bachelor
+                Universitaire de
+                Technologie (BUT) Informatique à l’IUT d’Orsay, rattaché à l’Université Paris-Saclay.
+                Passionné depuis toujours par l’informatique et les nouvelles technologies, je suis animé par une réelle
+                curiosité et un désir
+                constant d’apprendre.
+                Ce domaine en perpétuelle évolution m’attire par la richesse de ses applications, sa dimension créative,
+                ainsi que les nombreux
+                défis qu’il propose. Je m’efforce chaque jour de renforcer mes compétences, tant sur le plan théorique
+                que pratique, afin de me
+                préparer au mieux aux exigences du monde professionnel.
             </p>
- 
-        </header>
+            <p>
+                Je suis à la recherche d'un stage à partir du 20 Avril 2026 de 3 mois dans le domaine du
+                <strong>développement web ou mobile</strong> en Ile de France ou en Guadeloupe. Avec une possibilité de
+                le
+                réaliser aussi en tant que développeur <strong>full/stack</strong>. Ce stage permettra d'acquérir des
+                compétences notables dans le monde professionelle
+            </p>
 
-        <!-- 🧭 NAVIGATION -->
-        <nav class="navbar" id="navbar">
-            <div class="nav-container">
+            <p>
+                Passionné par le développement web, je souhaite mettre mes compétences techniques au service de projets
+                ambitieux tout en m'impliquant dans leur pilotage. Ma double compétence en développement et en
+                management de projet me permet d'assurer une coordination efficace entre les enjeux techniques et les
+                objectifs stratégiques.
+            </p>
+        </section>
 
-                <!-- Zone gauche : Logo -->
-                <div class="nav-left">
-                    <div href="#" class="nav-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
-                        Noahn de Lacroix
-                    </div>
-                </div>
+        <!-- 🧩 PROFIL PROFESSIONNEL -->
+        <section id="profile" class="reveal">
+            <h2 data-translate="profile_title">Profil professionnel</h2>
 
-                <!-- Zone droite : liens + boutons + hamburger -->
-                <div class="nav-right">
-
-                    <!-- Menu Desktop -->
-                    <div class="nav-menu">
-                        <a href="#about" class="nav-link" data-translate="nav_about">À propos</a>
-                        <a href="#profile" class="nav-link" data-translate="nav_profile">Profil</a>
-                        <a href="#projects" class="nav-link" data-translate="nav_projects">Projets</a>
-                        <a href="#contacts" class="nav-link" data-translate="nav_contacts">Contact</a>
-                    </div>
-
-                    <!-- Boutons à DROITE (langue + thème) -->
-                    <div class="nav-buttons">
-                        <button class="lang-toggle-btn" id="lang-desktop" type="button" aria-label="Changer la langue">
-                            EN
-                        </button>
-                    </div>
-
-                    <!-- Hamburger -->
-                    <button class="nav-toggle" id="nav-toggle">
-                        <span class="hamburger"></span>
-                        <span class="hamburger"></span>
-                        <span class="hamburger"></span>
-                    </button>
-
-                </div>
-
+            <h3 data-translate="">Expériences Professionnelles</h3>
+            <div class="pro-exp">
+                <h4>Stage d'Observation de Troisième</h4>
+                <p><strong>Lieu :</strong> Jet d'Encre, Les Abymes, Guadeloupe</p>
+                <p><strong>Période :</strong> Janvier 2021</p>
+                <p>
+                    <strong>Boutique Informatique :</strong>
+                    Immersion au sein du pôle vente et technique. Accueil des clients, conseil sur le choix de matériels
+                    (ordinateurs, solutions d'impression, périphériques) et initiation au diagnostic ainsi qu'à la
+                    maintenance de composants informatiques.
+                </p>
             </div>
 
-            <!-- Menu mobile -->
-            <div class="nav-mobile" id="nav-mobile">
-                <a href="#about" class="nav-mobile-link" data-translate="nav_about">À propos</a>
-                <a href="#profile" class="nav-mobile-link" data-translate="nav_profile">Profil</a>
-                <a href="#projects" class="nav-mobile-link" data-translate="nav_projects">Projets</a>
-                <a href="#contacts" class="nav-mobile-link" data-translate="nav_contacts">Contact</a>
-                
+            <div class="pro-exp">
+                <h4>Bénévole en Organisation Événementielle</h4>
+                <p><strong>Lieu :</strong> Baie-Mahault, Guadeloupe</p>
+                <p><strong>Période :</strong> Juillet 2024</p>
+                <p>
+                    <strong>Missions :</strong>
+                    Aide logistique à l'installation et à la préparation d'un événement de grande envergure.
+                </p>
             </div>
-        </nav>
- 
+            <!-- 🔧 COMPÉTENCES TECHNIQUES -->
+            <h3 data-translate="tech_skills">Compétences Techniques</h3>
+            <h4 class="type_skills">Développement Logiciel & Web</h4>
+            <div class="tech-grid">
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python">Python</div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">Java
+                </div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">C#
+                </div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                        alt="C++">C++</div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript">JavaScript</div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        alt="ReactJS">React</div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        alt="NodeJS">Node.js</div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">PHP
+                </div>
+            </div>
 
-        <!-- MAIN CONTENT -->
-        <main>
+            <h4 class="type_skills">Gestion de Données & Web Sémantique</h4>
+            <div class="tech-grid">
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                        alt="MySQL">SQL (MySQL)</div>
+                <div class="tech-item"><img src="https://www.svgrepo.com/show/374026/rdf.svg" alt="RDF">RDF / RDFS</div>
+                <div class="tech-item"><img src="https://www.svgrepo.com/show/374089/sparql.svg" alt="SPARQL">SPARQL
+                </div>
+                <div class="tech-item"><img src="https://www.svgrepo.com/show/373589/excel.svg" alt="Excel">Analyse de
+                    données (Excel)</div>
+            </div>
 
-            <!-- À PROPOS -->
-            <section id="about" class="reveal">
-                <h2 data-translate="about_title">À propos de moi</h2>
+            <h4 class="type_skills">Systèmes, Réseaux & Performance</h4>
+            <div class="tech-grid">
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                        alt="Linux">Linux & Bash</div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        alt="Docker">Docker & Conteneurisation</div>
+                <div class="tech-item"><img src="https://www.svgrepo.com/show/449914/thread.svg"
+                        alt="Threads">Multi-threading</div>
+                <div class="tech-item"><img src="https://www.svgrepo.com/show/354366/socket-io.svg"
+                        alt="Sockets">Programmation Sockets</div>
+            </div>
+
+            <h4 class="type_skills">Management & Design de Projet</h4>
+            <div class="tech-grid">
+                <div class="tech-item"><img src="./assets/agile.png" alt="Agile">Méthodologies Agiles</div>
+                <div class="tech-item"><img src="./assets/management.png" alt="MSI">Management avancée des SI</div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                        alt="Figma">Prototypage Figma</div>
+                <div class="tech-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        alt="GitHub">Versionnage & CI/CD (GitHub)</div>
+            </div>
+
+            <!-- 🎯 QUALITÉS PERSONNELLES -->
+            <h3>Qualités personnelles</h3>
+            <div class="qualities">
+                <p>Esprit d'analyse et de résolution de problèmes</p>
+                <p>Capacité à travailler en équipe</p>
+                <p>Autonomie et curiosité</p>
+                <p>Organisation d'un projet</p>
+                <p> Responsabilité </p>
+            </div>
+
+            <h3> Mes diplomes obtenues</h3>
+
+            <div class="degree-card">
+                <h4>BUT Informatique – 2ème année</h4>
+                <p><strong>Établissement :</strong> IUT d'Orsay – Université Paris-Saclay</p>
+                <p><strong>Période :</strong> 2023 – en cours</p>
+                <p><strong>Description :</strong> Formation en informatique générale, développement logiciel, réseaux et
+                    bases de données. Projet de groupe et développement de compétences professionnelles.</p>
+                <p><strong>Statut :</strong> En cours</p>
+            </div>
+
+            <div class="degree-card">
+                <h4>Baccalauréat Général – NSI et Mathématiques</h4>
+                <p><strong>Établissement :</strong> Lycée Polyvalent Charles Coeffin, Baie-Mahault, Guadeloupe</p>
+                <p><strong>Période :</strong> 2021 – 2024</p>
+                <p><strong>Mention :</strong> Bien</p>
                 <p>
-                    Je m'appelle <strong>Noahn de LACROIX</strong>, j’ai 19 ans et je suis actuellement étudiant en Bachelor Universitaire de 
-                    Technologie (BUT) Informatique à l’IUT d’Orsay, rattaché à l’Université Paris-Saclay.
-                    Passionné depuis toujours par l’informatique et les nouvelles technologies, je suis animé par une réelle curiosité et un désir 
-                    constant d’apprendre.
-                    Ce domaine en perpétuelle évolution m’attire par la richesse de ses applications, sa dimension créative, ainsi que les nombreux 
-                    défis qu’il propose. Je m’efforce chaque jour de renforcer mes compétences, tant sur le plan théorique que pratique, afin de me 
-                    préparer au mieux aux exigences du monde professionnel.
+                    <strong>Description :</strong>
+                    Cursus général avec comme spécialités <strong>Numérique et Sciences de l'informatique</strong> et
+                    <strong>Mathématiques</strong> avec en année de première <strong>Science de l'ingénieur</strong>.
+                    Comme langue étudiée, anglais et espagnol.
                 </p>
-                <p>
-                    Je suis à la recherche d'un stage à partir du 20 Avril 2026 de 3 mois dans le domaine du <strong>développement web ou mobile</strong> en Ile de France ou en Guadeloupe. Avec une possibilité de le 
-                    réaliser aussi en tant que développeur <strong>full/stack</strong>. Ce stage permettra d'acquérir des compétences notables dans le monde professionelle 
-                </p>
-
-                <p>
-                    Passionné par le développement web, je souhaite mettre mes compétences techniques au service de projets ambitieux tout en m'impliquant dans leur pilotage. Ma double compétence en développement et en
-                     management de projet me permet d'assurer une coordination efficace entre les enjeux techniques et les objectifs stratégiques.
-                </p>
-            </section>
-
-            <!-- 🧩 PROFIL PROFESSIONNEL -->
-            <section id="profile" class="reveal">
-                <h2 data-translate="profile_title">Profil professionnel</h2>
-                
-                <h3 data-translate="">Expériences Professionels</h3>
-                <div class="pro-exp">
-                    <h4>Stage d'Observation de Troisième</h4>
-                    <p><strong>Lieu :</strong> Jet d'Encre, Les Abymes, Guadeloupe</p>
-                    <p><strong>Période :</strong> Janvier 2021</p>
-                    <p>
-                        <strong>Boutique Informatique :</strong> 
-                        Immersion au sein du pôle vente et technique. Accueil des clients, conseil sur le choix de matériels 
-                        (ordinateurs, solutions d'impression, périphériques) et initiation au diagnostic ainsi qu'à la 
-                        maintenance de composants informatiques.
-                    </p>  
-                </div>
-                
-                <div class="pro-exp">
-                    <h4>Bénévole en Organisation Événementielle</h4>
-                    <p><strong>Lieu :</strong> Baie-Mahault, Guadeloupe</p>
-                    <p><strong>Période :</strong> Juillet 2024</p>
-                    <p>
-                        <strong>Missions :</strong> 
-                        Aide logistique à l'installation et à la préparation d'un événement de grande envergure.
-                    </p>  
-                </div>
-                <!-- 🔧 COMPÉTENCES TECHNIQUES -->
-                <h3 data-translate="tech_skills">Compétences Techniques</h3>
-                <h4 class="type_skills">Développement Logiciel & Web</h4>
-                <div class="tech-grid">
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">Java</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">C#</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">C++</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">JavaScript</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="ReactJS">React</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NodeJS">Node.js</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">PHP</div>
-                </div>
-
-                <h4 class="type_skills">Gestion de Données & Web Sémantique</h4>
-                <div class="tech-grid">               
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">SQL (MySQL)</div>
-                    <div class="tech-item"><img src="https://www.svgrepo.com/show/374026/rdf.svg" alt="RDF">RDF / RDFS</div>
-                    <div class="tech-item"><img src="https://www.svgrepo.com/show/374089/sparql.svg" alt="SPARQL">SPARQL</div> 
-                    <div class="tech-item"><img src="https://www.svgrepo.com/show/373589/excel.svg" alt="Excel">Analyse de données (Excel)</div>                         
-                </div>
-
-                <h4 class="type_skills">Systèmes, Réseaux & Performance</h4>
-                <div class="tech-grid">
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">Linux & Bash</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">Docker & Conteneurisation</div>
-                    <div class="tech-item"><img src="https://www.svgrepo.com/show/449914/thread.svg" alt="Threads">Multi-threading</div>
-                    <div class="tech-item"><img src="https://www.svgrepo.com/show/354366/socket-io.svg" alt="Sockets">Programmation Sockets</div>
-                </div>
-
-                <h4 class="type_skills">Management & Design de Projet</h4>
-                <div class="tech-grid">
-                    <div class="tech-item"><img src="./assets/agile.png" alt="Agile">Méthodologies Agiles</div>
-                    <div class="tech-item"><img src="./assets/management.png" alt="MSI">Management avancée des SI</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">Prototypage Figma</div>
-                    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">Versionnage & CI/CD (GitHub)</div>
-                </div>
-
-                <!-- 🎯 QUALITÉS PERSONNELLES -->
-                <h3>Qualités personnelles</h3>
-                <div class="qualities">
-                    <p>Esprit d'analyse et de résolution de problèmes</p>
-                    <p>Capacité à travailler en équipe</p>
-                    <p>Autonomie et curiosité</p>
-                    <p>Organisation d'un projet</p>
-                    <p> Responsabilité </p>
-                </div>
-
-                <h3> Mes diplomes obtenues</h3>
-                
-                <div class="degree-card">
-                    <h4>BUT Informatique – 2ème année</h4>
-                    <p><strong>Établissement :</strong> IUT d'Orsay – Université Paris-Saclay</p>
-                    <p><strong>Période :</strong> 2023 – en cours</p>
-                    <p><strong>Description :</strong> Formation en informatique générale, développement logiciel, réseaux et bases de données. Projet de groupe et développement de compétences professionnelles.</p>
-                    <p><strong>Statut :</strong> En cours</p>
-                </div>
-
-                <div class="degree-card">
-                    <h4>Baccalauréat Général – NSI et Mathématiques</h4>
-                    <p><strong>Établissement :</strong> Lycée Polyvalent Charles Coeffin, Baie-Mahault, Guadeloupe</p>
-                    <p><strong>Période :</strong> 2021 – 2024</p>
-                    <p><strong>Mention :</strong> Bien</p>
-                    <p>
-                        <strong>Description :</strong> 
-                        Cursus général avec comme spécialités <strong>Numérique et Sciences de l'informatique</strong> et
-                        <strong>Mathématiques</strong> avec en année de première <strong>Science de l'ingénieur</strong>. Comme langue étudiée, anglais et espagnol.</p>
-                </div>
+            </div>
 
 
-                <!-- 🌟 Langues parlées -->
-                <h3>Langues parlées</h3>
-                <ul class="languages-list">
-                    <li>
-                        <img src="https://flagcdn.com/w40/fr.png" alt="Drapeau Français" class="flag-icon">
-                        <span><strong>Français</strong> – Maternel</span>
-                    </li>
-                    <li>
-                        <img src="https://flagcdn.com/w40/us.png" alt="Drapeau Anglais" class="flag-icon">
-                        <span><strong>Anglais</strong> – B1/B2</span>
-                    </li>
-                    <li>
-                        <img src="assets/gp.png" alt="Drapeau Guadeloupe" class="flag-icon">
-                        <span><strong>Créole</strong> – Courant</span>
-                    </li>
-                    <li>
-                        <img src="https://flagcdn.com/w40/es.png" alt="Drapeau Espagnol" class="flag-icon">
-                        <span><strong>Espagnol</strong> – Notions</span>
-                    </li>
-                </ul>
+            <!-- 🌟 Langues parlées -->
+            <h3>Langues parlées</h3>
+            <ul class="languages-list">
+                <li>
+                    <img src="https://flagcdn.com/w40/fr.png" alt="Drapeau Français" class="flag-icon">
+                    <span><strong>Français</strong> – Maternel</span>
+                </li>
+                <li>
+                    <img src="https://flagcdn.com/w40/us.png" alt="Drapeau Anglais" class="flag-icon">
+                    <span><strong>Anglais</strong> – B1/B2</span>
+                </li>
+                <li>
+                    <img src="assets/gp.png" alt="Drapeau Guadeloupe" class="flag-icon">
+                    <span><strong>Créole</strong> – Courant</span>
+                </li>
+                <li>
+                    <img src="https://flagcdn.com/w40/es.png" alt="Drapeau Espagnol" class="flag-icon">
+                    <span><strong>Espagnol</strong> – Notions</span>
+                </li>
+            </ul>
 
-                <!-- CENTRES D'INTÉRÊT -->
-                <div class="container">
+            <!-- CENTRES D'INTÉRÊT -->
+            <div class="container">
                 <h3>Centres d'intérêt</h3>
                 <div class="interest-grid">
                     <div class="interest-card">
                         <img src="./assets/football.gif" alt="Football">
                         <h4>Football</h4>
-                        <p><strong>Pratique en club :</strong> 8 ans de pratique (niveau régional). Poste de milieu défensif, axé sur la vision de jeu et l'esprit d'équipe.</p>
+                        <p><strong>Pratique en club :</strong> 8 ans de pratique (niveau régional). Poste de milieu
+                            défensif, axé sur la vision de jeu et l'esprit d'équipe.</p>
                     </div>
 
                     <div class="interest-card">
                         <img src="./assets/musculation.jpeg" alt="Musculation">
                         <h4>Musculation & Fitness</h4>
-                        <p><strong>Régularité :</strong> Pratique intensive depuis 2 ans (3 séances/semaine). Discipline axée sur le dépassement de soi et la planification d'objectifs.</p>
+                        <p><strong>Régularité :</strong> Pratique intensive depuis 2 ans (3 séances/semaine). Discipline
+                            axée sur le dépassement de soi et la planification d'objectifs.</p>
                     </div>
 
                     <div class="interest-card">
                         <img src="./assets/histoire.gif" alt="Histoire">
                         <h4>Histoire & documentation</h4>
-                        <p><strong>Type :</strong> . Analyse des stratégies militaires et des grandes guerres et de l'histoire de la monarchie.</p>
+                        <p><strong>Type :</strong> . Analyse des stratégies militaires et des grandes guerres et de
+                            l'histoire de la monarchie.</p>
                     </div>
 
                     <div class="interest-card">
                         <img src="./assets/cuisine.gif" alt="Cuisine">
                         <h4>Cuisine</h4>
-                        <p><strong>Spécialités :</strong> Maîtrise des plats traditionnels antillais (Bokit, Colombo) et méditerranéens. Sens de l'organisation et du dosage précis.</p>
+                        <p><strong>Spécialités :</strong> Maîtrise des plats traditionnels antillais (Bokit, Colombo) et
+                            méditerranéens. Sens de l'organisation et du dosage précis.</p>
                     </div>
 
                     <div class="interest-card">
                         <img src="./assets/sport.png" alt="Sport Spectacle">
                         <h4>Analyses Sportives</h4>
-                        <p><strong>Passion :</strong> F1 (stratégies pneumatiques) et NBA (statistiques avancées/sabermetrics). Suivi quotidien de l'actualité tech et sportive.</p>
+                        <p><strong>Passion :</strong> F1 (stratégies pneumatiques) et NBA (statistiques
+                            avancées/sabermetrics). Suivi quotidien de l'actualité tech et sportive.</p>
                     </div>
                 </div>
             </div>
 
-            </section>
+        </section>
 
-            <!-- PROJETS -->
-            <section id="projects" class="reveal">
-                <h2>Mes Projets Professionels et personnels</h2>
-                <p>Découvrez mes réalisations dans le domaine informatique</p>                
+        <!-- PROJETS -->
+        <section id="projects" class="reveal">
+            <h2>Mes Projets Professionels et personnels</h2>
+            <p>Découvrez mes réalisations dans le domaine informatique</p>
 
-                <div class="project-card">
-                    <h3>Application de Gestion de Tâches</h3>
-                    <p>
-                        Outil interactif pour suivre l’avancement de projets personnels ou académiques. L’application permet 
-                        de créer, modifier et supprimer des tâches, et de les organiser par priorité.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag tag-blue">Web Development</span>
-                        <span class="tag tag-green">Backend</span>
+            <div class="project-card">
+                <h3>Application de Gestion de Tâches</h3>
+                <p>
+                    Outil interactif pour suivre l’avancement de projets personnels ou académiques. L’application permet
+                    de créer, modifier et supprimer des tâches, et de les organiser par priorité.
+                </p>
+                <div class="project-tags">
+                    <span class="tag tag-blue">Web Development</span>
+                    <span class="tag tag-green">Backend</span>
+                </div>
+                <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
+            </div>
+
+            <div class="project-card">
+                <h3>Site Web d'un parc d'attraction virtuel</h3>
+                <p>
+                    Développement d’un site web pour un parc d’attractions virtuel nommé Ice Peak Park. Le site présente
+                    les attractions,
+                    événements et permet une navigation interactive pour les visiteurs.
+                </p>
+                <div class="project-tags">
+                    <span class="tag tag-blue">Web Development</span>
+                    <span class="tag tag-green">Frontend</span>
+                    <span class="tag tag-purple">UX/UI</span>
+                </div>
+                <button><a href="https://mayno971.github.io/cwad/accueil.html" target="_blank">Voir</a></button>
+            </div>
+
+            <div class="project-card">
+                <h3>Jeu Vidéo Algorithmique 2D</h3>
+                <p>Développement d’un jeu vidéo 2D axé sur les algorithmes et la logique. L’objectif était de créer des
+                    mécaniques de jeu interactives
+                    et stimulantes tout en appliquant les concepts de programmation orientée objet.
+                </p>
+                <div class="project-tags">
+                    <span class="tag tag-blue">C++</span>
+                    <span class="tag tag-green">Algorithmique</span>
+                    <span class="tag tag-purple">Game Dev</span>
+                </div>
+                <button><a href="https://mayno971.github.io/cwad/accueil.html" target="_blank">Voir</a></button>
+            </div>
+
+            <div class="project-card">
+                <h3>Application Cité Internationale Universitaire de Paris</h3>
+                <p>
+                    Développement d’une application Java orientée objet pour adapter le site web de la Cité
+                    Internationale Universitaire de Paris en
+                    une interface interactive. Le projet combine <strong>Java Swing</strong> pour l’interface et GitHub
+                    pour la gestion collaborative.
+                </p>
+                <div class="project-tags">
+                    <span class="tag tag-blue">Java</span>
+                    <span class="tag tag-green">UX/UI</span>
+                    <span class="tag tag-purple">Collaboration</span>
+                </div>
+                <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
+            </div>
+
+            <div class="project-card">
+                <h3>Application de Création de Groupes pour une Université</h3>
+                <p>
+                    Conception et déploiement d'une plateforme universitaire automatisant la répartition des
+                    étudiants. Optimisation de la création des groupes via des algorithmes de génération automatique
+                    et modélisation d'une base de données relationnelle structurée.
+                </p>
+                <p><strong>Langage utilisés : </strong> PHP, HTML, CSS, Java, PL/SQL, SQL</p>
+                <div class="project-tags">
+                    <span class="tag tag-blue">Web Development</span>
+                    <span class="tag tag-green">Backend</span>
+                    <span class="tag tag-purple">Database</span>
+                </div>
+                <button><a href="https://projets.iut-orsay.fr/saes3-mdiall48/" target="_blank">Voir</a></button>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contacts" class="contact">
+            <div class="contact-container">
+                <h2>Contactez-moi</h2>
+                <p>Intéressé par une collaboration ? N'hésitez pas à me contacter</p>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <h4>Email</h4>
+                        <a href="mailto:nodelac@gmail.com">nodelac@gmail.com</a>
                     </div>
-                    <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
+
+                    <a href="tel:+33649778667" class="contact-card clickable-card">
+                        <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        <h4>Numéro de Téléphone</h4>
+                        <p>+33 (0) 6 49 77 86 67</p>
+                    </a>
+
+                    <a href="https://github.com/Mayno971" target="_blank" class="contact-card clickable-card">
+                        <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                        <h4>Github</h4>
+                        <span data-translate="github_label">Voir mon profil GitHub</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/noahn-de-lacroix-8b455339a" target="_blank"
+                        class="contact-card clickable-card">
+                        <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <h4 data-key="contact-linkedin">Linkedin</h4>
+                        <span>Voir mon profil LinkedIn</span>
+                    </a>
                 </div>
 
-                <div class="project-card">
-                    <h3>Site Web d'un parc d'attraction virtuel</h3>
-                    <p>
-                        Développement d’un site web pour un parc d’attractions virtuel nommé Ice Peak Park. Le site présente les attractions, 
-                        événements et permet une navigation interactive pour les visiteurs. 
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag tag-blue">Web Development</span>
-                        <span class="tag tag-green">Frontend</span>
-                        <span class="tag tag-purple">UX/UI</span>
-                    </div>
-                    <button><a href="https://mayno971.github.io/cwad/accueil.html" target="_blank">Voir</a></button>
-                </div>
+            </div>
+        </section>
 
-                <div class="project-card">
-                    <h3>Jeu Vidéo Algorithmique 2D</h3>
-                    <p>Développement d’un jeu vidéo 2D axé sur les algorithmes et la logique. L’objectif était de créer des mécaniques de jeu interactives 
-                        et stimulantes tout en appliquant les concepts de programmation orientée objet.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag tag-blue">C++</span>
-                        <span class="tag tag-green">Algorithmique</span>
-                        <span class="tag tag-purple">Game Dev</span>
-                    </div>
-                    <button><a href="https://mayno971.github.io/cwad/accueil.html" target="_blank">Voir</a></button>
-                </div>
+    </main>
 
-                <div class="project-card">
-                    <h3>Application Cité Internationale Universitaire de Paris</h3>
-                    <p>
-                        Développement d’une application Java orientée objet pour adapter le site web de la Cité Internationale Universitaire de Paris en 
-                        une interface interactive. Le projet combine <strong>Java Swing</strong> pour l’interface et GitHub pour la gestion collaborative.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag tag-blue">Java</span>
-                        <span class="tag tag-green">UX/UI</span>
-                        <span class="tag tag-purple">Collaboration</span>
-                    </div>
-                    <button><a href="https://github.com/username/task-manager" target="_blank">Voir</a></button>
-                </div>
-            
-                <div class="project-card">
-                    <h3>Application de Création de Groupes pour une Université</h3>
-                    <p>
-                        Conception et déploiement d'une plateforme universitaire automatisant la répartition des 
-                        étudiants. Optimisation de la création des groupes via des algorithmes de génération automatique 
-                        et modélisation d'une base de données relationnelle structurée.
-                    </p>
-                    <p><strong>Langage utilisés : </strong> PHP, HTML, CSS, Java, PL/SQL, SQL</p>
-                    <div class="project-tags">
-                        <span class="tag tag-blue">Web Development</span>
-                        <span class="tag tag-green">Backend</span>
-                        <span class="tag tag-purple">Database</span>
-                    </div>
-                    <button><a href="https://projets.iut-orsay.fr/saes3-mdiall48/" target="_blank">Voir</a></button>
-                </div>
-            </section>
+    <!-- FOOTER -->
+    <footer id="NoteEtReferences" class="reveal">
+        <p>&copy; 2026 Tous droits réservez à Noahn de Lacroix</p>
 
-            <!-- CONTACT -->
-            <section id="contacts" class="contact">
-                <div class="contact-container">
-                    <h2>Contactez-moi</h2>
-                    <p>Intéressé par une collaboration ? N'hésitez pas à me contacter</p>
-                    <div class="contact-grid">
-                        <div class="contact-card">
-                            <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <h4>Email</h4>
-                            <a href="mailto:nodelac@gmail.com">nodelac@gmail.com</a>
-                        </div>
-
-                        <div class="contact-card">
-                            <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <h4>Numéro de Téléphone</h4>
-                            <p>+33 (0) 6 49 77 86 67</p>
-                        </div>
-                        
-                        
-                        <div class="contact-card">
-                            <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                            <h4>GitHub</h4>
-                            <p></p>
-                        </div>
-
-                        <div class="contact-card">
-                            <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <h4 data-key="contact-linkedin">Linkedin</h4>
-                            <a href="https://www.linkedin.com/in/noahn-de-lacroix-8b455339a" target="_blank">
-                                Voir mon profil LinkedIn
-                            </a>
-                        </div>
-                    </div>
-                
-                    
-
-                    <!--  Formulaire Contact-->
-                    <form class="contact-form">
-                        <h3>Envoyer un message</h3>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Votre nom</label>
-                                <input type="text" id="name" placeholder="Nom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Votre Prénom</label>
-                                <input type="text" id="name" placeholder="Prénom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Votre email</label>
-                                <input type="email" id="email" placeholder="nom@example.com" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Votre message</label>
-                            <textarea id="message" placeholder="Dites-m'en plus sur votre projet..." rows="5" required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">
-                            <span>Envoyer le message</span>
-                        </button>
-                    </form>
-
-                </div>
-            </section>
-
-        </main>
-
-        <!-- FOOTER -->
-        <footer id="NoteEtReferences" class="reveal">
-            <p>&copy; 2026 Tous droits réservez à Noahn de Lacroix</p>
-            
-        </footer>
+    </footer>
 
 
-        <!-- JAVASCRIPT -->
-        <script src="./scripts/script.js"></script>
-    </body>
+    <!-- JAVASCRIPT -->
+    <script src="./scripts/script.js"></script>
+</body>
+
 </html>
